@@ -160,20 +160,131 @@
 
 /// More Function
 
+// package main
+
+// import "fmt"
+
+// func PrintName() {
+// 	fmt.Println("Education is must!")
+// }
+
+// func PrintName2(name string) {
+// 	fmt.Println("You are the mr. ", name)
+// }
+
+// func main() {
+// 	PrintName()
+// 	PrintName2("Foysal Joarder")
+
+// }
+
+/*Day-2*/
+
+/// All Functions
+
+// package main
+
+// import "fmt"
+
+// func welcomeMessage() {
+// 	fmt.Println("Welcome to the application")
+// }
+
+// func getname() string {
+// 	var name string
+// 	fmt.Println("Please Enter your Name:")
+// 	fmt.Scanln(&name)
+// 	return name
+// }
+
+// func getTwoNumber() (int, int) {
+// 	var num1 int
+// 	var num2 int
+
+// 	fmt.Println("Please Enter your First Number:")
+// 	fmt.Scanln(&num1)
+
+// 	fmt.Println("Please Enter your Last Number:")
+// 	fmt.Scanln(&num2)
+
+// 	return num1, num2
+// }
+
+// func addNumber(num1 int, num2 int) int {
+// 	sum := num1 + num2
+
+// 	return sum
+// }
+
+// func displayScreen(name string, sum int) {
+// 	fmt.Println("Hello, Mr. ", name)
+// 	fmt.Println("Summation is ", sum)
+// }
+
+// func goodByeMessage() {
+// 	fmt.Println("Thank you for using our application")
+// 	fmt.Println("Good bye")
+// }
+
+// func main() {
+
+// 	// fmt.Println("Welcome to the application")
+
+// 	// var name string
+// 	// fmt.Println("Please Enter your Name:")
+// 	// fmt.Scanln(&name)
+
+// 	// var num1 int
+// 	// var num2 int
+// 	// fmt.Println("Please Enter your First Number:")
+// 	// fmt.Scanln(&num1)
+
+// 	//fmt.Println("Please Enter your Last Number:")
+// 	//fmt.Scanln(&num2)
+
+// 	// sum := num1 + num2
+
+// 	// fmt.Println("Hello, Mr. ", name)
+// 	// fmt.Println("Summation is ", sum)
+
+// 	// fmt.Println("Thank you for using our application")
+// 	// fmt.Println("Good bye")
+
+// 	// calling all function serilally
+// 	welcomeMessage()
+// 	name := getname()
+// 	num1, num2 := getTwoNumber()
+// 	sumation := addNumber(num1, num2)
+// 	displayScreen(name, sumation)
+// 	goodByeMessage()
+// }
+
+/// What is Scope
+
 package main
 
 import "fmt"
 
-func PrintName() {
-	fmt.Println("Education is must!")
-}
+var (
+	a = 20
+	b = 30
+)
 
-func PrintName2(name string) {
-	fmt.Println("You are the mr. ", name)
+func add(x int, y int) {
+	z := x + y
+	fmt.Println("Summation:", z)
 }
 
 func main() {
-	PrintName()
-	PrintName2("Foysal Joarder")
 
+	p := 40
+	q := 50
+
+	add(p, q)
+
+	add(a, b)
+
+	add(p, b)
+
+	add(q, a)
 }

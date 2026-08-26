@@ -265,6 +265,7 @@ package main
 
 import "fmt"
 
+// Global portion
 var (
 	a = 20
 	b = 30
@@ -288,3 +289,7 @@ func main() {
 
 	add(q, a)
 }
+
+/*Day-3*/
+
+/// scope more

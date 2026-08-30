@@ -261,6 +261,65 @@
 
 /// What is Scope
 
+// package main
+
+// import "fmt"
+
+// // Global portion
+// var (
+// 	a = 20
+// 	b = 30
+// )
+
+// func add(x int, y int) {
+// 	z := x + y
+// 	fmt.Println("Summation:", z)
+// }
+
+// func main() {
+
+// 	p := 40
+// 	q := 50
+
+// 	add(p, q)
+
+// 	add(a, b)
+
+// 	add(p, b)
+
+// 	add(q, a)
+// }
+
+/*Day-3*/
+
+/// scope more
+
+// package main
+
+// import "fmt"
+
+// // Global portion
+// var (
+// 	a = 20
+// 	b = 30
+// )
+
+// func add(x int, y int) {
+// 	z := x + y
+// 	fmt.Println("Summation:", z)
+// }
+
+// func main() {
+
+// 	// Local Variable
+// 	p := 4
+
+// 	if p >= 4 {
+// 		fmt.Println("I am a software engineer")
+// 		fmt.Println("I am ", p, "Years experience")
+// 	}
+// }
+
 package main
 
 import "fmt"
@@ -278,18 +337,19 @@ func add(x int, y int) {
 
 func main() {
 
-	p := 40
-	q := 50
+	// Local Variable
+	p := 3
 
-	add(p, q)
-
-	add(a, b)
-
-	add(p, b)
-
-	add(q, a)
+	switch p {
+	case 1:
+		fmt.Println("I am a software engineer 1 year experience")
+	case 2:
+		fmt.Println("I am software engineer 2 year experience")
+	case 3:
+		fmt.Println("I am software engineer 3 year experience")
+	case 4:
+		fmt.Println("I am software engineer 4 year experience")
+	case 5:
+		fmt.Println("I am software engineer 5 year experience")
+	}
 }
-
-/*Day-3*/
-
-/// scope more

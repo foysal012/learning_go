@@ -320,36 +320,90 @@
 // 	}
 // }
 
+// package main
+
+// import "fmt"
+
+// // Global portion
+// var (
+// 	a = 20
+// 	b = 30
+// )
+
+// func add(x int, y int) {
+// 	z := x + y
+// 	fmt.Println("Summation:", z)
+// }
+
+// func main() {
+
+// 	// Local Variable
+// 	p := 3
+
+// 	switch p {
+// 	case 1:
+// 		fmt.Println("I am a software engineer 1 year experience")
+// 	case 2:
+// 		fmt.Println("I am software engineer 2 year experience")
+// 	case 3:
+// 		fmt.Println("I am software engineer 3 year experience")
+// 	case 4:
+// 		fmt.Println("I am software engineer 4 year experience")
+// 	case 5:
+// 		fmt.Println("I am software engineer 5 year experience")
+// 	}
+// }
+
+/*Day-5*/
+
+/// More Scope Example
+
+// package main
+
+// import "fmt"
+
+// var (
+// 	a = 10
+// 	b = 30
+// )
+
+// func printResult(output int) {
+// 	fmt.Println("come")
+// 	fmt.Println(output)
+// 	fmt.Println("finish")
+// }
+
+// func add(x int, y int) {
+// 	fmt.Println("Start")
+// 	result := x + y
+// 	printResult(result)
+// 	fmt.Println("End")
+// }
+
+// func main() {
+// 	fmt.Println("Welcome")
+// 	add(a, b)
+// 	fmt.Println("Congratulations")
+// }
+
+/// More Scope Example
+
 package main
 
 import "fmt"
 
-// Global portion
-var (
-	a = 20
-	b = 30
-)
-
-func add(x int, y int) {
-	z := x + y
-	fmt.Println("Summation:", z)
-}
+var a = 10
 
 func main() {
+	fmt.Println("Welcome")
+	age := 30
 
-	// Local Variable
-	p := 3
-
-	switch p {
-	case 1:
-		fmt.Println("I am a software engineer 1 year experience")
-	case 2:
-		fmt.Println("I am software engineer 2 year experience")
-	case 3:
-		fmt.Println("I am software engineer 3 year experience")
-	case 4:
-		fmt.Println("I am software engineer 4 year experience")
-	case 5:
-		fmt.Println("I am software engineer 5 year experience")
+	if age > 18 {
+		a := 47
+		fmt.Println("Value: ", a)
 	}
+
+	fmt.Println("Value: ", a)
+
+	fmt.Println("Congratulations")
 }

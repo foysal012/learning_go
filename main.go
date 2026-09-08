@@ -388,22 +388,39 @@
 
 /// More Scope Example
 
+// package main
+
+// import "fmt"
+
+// var a = 10
+
+// func main() {
+// 	fmt.Println("Welcome")
+// 	age := 30
+
+// 	if age > 18 {
+// 		a := 47
+// 		fmt.Println("Value: ", a)
+// 	}
+
+// 	fmt.Println("Value: ", a)
+
+// 	fmt.Println("Congratulations")
+// }
+
+/*Day-5*/
+
+/// Standered function
+
 package main
 
 import "fmt"
 
-var a = 10
+// Standered function
+func add(a, b int) {
+	fmt.Println(a + b)
+}
 
 func main() {
-	fmt.Println("Welcome")
-	age := 30
-
-	if age > 18 {
-		a := 47
-		fmt.Println("Value: ", a)
-	}
-
-	fmt.Println("Value: ", a)
-
-	fmt.Println("Congratulations")
+	add(10, 30)
 }

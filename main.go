@@ -412,15 +412,62 @@
 
 /// Standered function
 
+// package main
+
+// import "fmt"
+
+// // Standered function
+// func add(a, b int) {
+// 	fmt.Println(a + b)
+// }
+
+// func main() {
+// 	add(10, 30)
+// }
+
+/// Init function
+
+// package main
+
+// import "fmt"
+
+// var a = 10
+
+// func main() {
+// 	fmt.Println(a)
+// }
+
+// func init() {
+// 	fmt.Println(a)
+// 	a = 20
+// }
+
+/// annonymous function
+
 package main
 
 import "fmt"
 
-// Standered function
-func add(a, b int) {
-	fmt.Println(a + b)
+// standered or named function
+func add(a int, b int) {
+	c := a + b
+	fmt.Println(c)
 }
 
 func main() {
-	add(10, 30)
+	fmt.Println("ok")
+
+	// invoked / call / execute
+	add(6, 8)
+
+	// annonimus function
+	// IIFE (Imidietly invoked function expression) or FE
+	func(x int, y int) {
+		z := x + y
+		fmt.Println(z)
+	}(7, 8)
+}
+
+func init() {
+	fmt.Println("I am the first function")
 }

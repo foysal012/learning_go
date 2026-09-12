@@ -444,30 +444,64 @@
 
 /// annonymous function
 
+// package main
+
+// import "fmt"
+
+// // standered or named function
+// func add(a int, b int) {
+// 	c := a + b
+// 	fmt.Println(c)
+// }
+
+// func main() {
+// 	fmt.Println("ok")
+
+// 	// invoked / call / execute
+// 	add(6, 8)
+
+// 	// annonimus function
+// 	// IIFE (Imidietly invoked function expression) or FE
+// 	func(x int, y int) {
+// 		z := x + y
+// 		fmt.Println(z)
+// 	}(7, 8)
+// }
+
+// func init() {
+// 	fmt.Println("I am the first function")
+// }
+
+/// Function Expression or Assign Function in variable
+
 package main
 
 import "fmt"
 
-// standered or named function
-func add(a int, b int) {
+func sum() {
+	var result int = add(9, 10)
+
+	fmt.Println(result)
+}
+
+func add(a int, b int) int {
 	c := a + b
-	fmt.Println(c)
+	fmt.Println("output coming")
+	return c
 }
 
 func main() {
-	fmt.Println("ok")
 
-	// invoked / call / execute
-	add(6, 8)
+	sum()
 
-	// annonimus function
-	// IIFE (Imidietly invoked function expression) or FE
-	func(x int, y int) {
+	add := func(x int, y int) {
 		z := x + y
 		fmt.Println(z)
-	}(7, 8)
+	}
+
+	add(6, 8)
 }
 
 func init() {
-	fmt.Println("I am the first function")
+	fmt.Println("I am the First Programmer")
 }

@@ -474,34 +474,91 @@
 
 /// Function Expression or Assign Function in variable
 
+// package main
+
+// import "fmt"
+
+// func sum() {
+// 	var result int = add(9, 10)
+
+// 	fmt.Println(result)
+// }
+
+// func add(a int, b int) int {
+// 	c := a + b
+// 	fmt.Println("output coming")
+// 	return c
+// }
+
+// func main() {
+
+// 	sum()
+
+// 	add := func(x int, y int) {
+// 		z := x + y
+// 		fmt.Println(z)
+// 	}
+
+// 	add(6, 8)
+// }
+
+// func init() {
+// 	fmt.Println("I am the First Programmer")
+// }
+
+/// Higher order function ex-1
+
+// package main
+
+// import "fmt"
+
+// func sum(x int, y int, op func(p int, q int)) {
+// 	op(x, y)
+// }
+
+// // past order function
+// func add(a int, b int) {
+// 	c := a + b
+// 	fmt.Println(c)
+
+// }
+
+// func main() {
+// 	// add(2, 8)
+// 	sum(8, 2, add)
+// }
+
+// func init() {
+// 	fmt.Println("Welcome To the Software")
+// }
+
+/// Higher order function ex-2
+
 package main
 
 import "fmt"
 
-func sum() {
-	var result int = add(9, 10)
+// func sum(x int, y int, op func(p int, q int)) {
+// 	op(x, y)
+// }
 
-	fmt.Println(result)
+func call() func(x int, y int) {
+	return add
 }
 
-func add(a int, b int) int {
+// past order function
+func add(a int, b int) {
 	c := a + b
-	fmt.Println("output coming")
-	return c
+	fmt.Println(c)
+
 }
 
 func main() {
+	sum := call()
 
-	sum()
-
-	add := func(x int, y int) {
-		z := x + y
-		fmt.Println(z)
-	}
-
-	add(6, 8)
+	sum(4, 8)
 }
 
 func init() {
-	fmt.Println("I am the First Programmer")
+	fmt.Println("Welcome To the Software")
 }

@@ -534,31 +534,68 @@
 
 /// Higher order function ex-2
 
+// package main
+
+// import "fmt"
+
+// // func sum(x int, y int, op func(p int, q int)) {
+// // 	op(x, y)
+// // }
+
+// func call() func(x int, y int) {
+// 	return add
+// }
+
+// // past order function
+// func add(a int, b int) {
+// 	c := a + b
+// 	fmt.Println(c)
+
+// }
+
+// func main() {
+// 	sum := call()
+
+// 	sum(4, 8)
+// }
+
+// func init() {
+// 	fmt.Println("Welcome To the Software")
+// }
+
+/// Go Internal Memory
+
+/*
+1. Code Segment
+2. Data Segment
+3. Stack
+4. Heap
+*/
+
 package main
 
 import "fmt"
 
-// func sum(x int, y int, op func(p int, q int)) {
-// 	op(x, y)
-// }
+const a = 50
 
-func call() func(x int, y int) {
-	return add
-}
+var p int = 200
 
-// past order function
-func add(a int, b int) {
-	c := a + b
-	fmt.Println(c)
+func call() {
+	add := func(x int, y int) {
+		z := x + y
+		fmt.Println(z)
+	}
 
+	add(30, 40)
+	add(p, a)
 }
 
 func main() {
-	sum := call()
+	call()
 
-	sum(4, 8)
+	fmt.Println(a)
 }
 
 func init() {
-	fmt.Println("Welcome To the Software")
+	fmt.Println("Go Internal Memory")
 }
